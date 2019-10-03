@@ -1,5 +1,5 @@
-![screen1]()
-##### Stress-free task management system
+# Taskmaster 6000
+##### The stress-free task management system
 
 
 # Taskmaster 6000 is a task management app for companies, teachers and even families that intends to alleviate tension and stress between the boss and their employees, teachers and their students and parents and their children.  Inspired by a research study called "Getting Things Done: The Science behind Stress-Free Productivity" by Francis Heylighen and Clément Vidal of the Evolution, Complexity and Cognition research group, the Taskmaster 4000 format is backed quantitative and qualitative reasearch from the best minds in the psychological productivity field.
@@ -15,8 +15,15 @@
 
 
 #### My favorite coding block
-![screen1]()
+
+#### Technologies used
+# 1. Javascript, node.js
+# 2. express
+# 3. React
+# 4. Heroku
+# 5. MongoDB
 
 #### Plans for future development
 [Trello Board](https://trello.com/b/UTOmquNt/project-4)
+[Wireframes and ERD](https://docs.google.com/presentation/d/11EuNJhwRJCv99f4DE6bK3_KdAYKsQksclJhKI6ynD-0/edit?usp=sharing)
 
