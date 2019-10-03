@@ -6,13 +6,13 @@ const CreateTask = (props) => {
       <div class="form-group row">
         <label for="taskname" class="col-sm-2 col-form-label">Task Name</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="taskname" placeholder={props.newTask.name} />
+          <input onChange={props.handleInputChange} type="text" class="form-control" id="taskname" name="taskname" /* value={props.newTask.name} */ />
         </div>
       </div>
       <div class="form-group row">
         <label for="description" class="col-sm-2 col-form-label">Description</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="description" placeholder="Enter Description of Task" />
+          <input type="text" class="form-control" id="description" value={props.newTask.description} />
         </div>
       </div>
       <div class="form-group row">

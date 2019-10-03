@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CreateTask from '../../components/CreateTask/CreateTask'
+import CreateTask from './CreateTask'
 import CreateGroup from '../../components/CreateGroup/CreateGroup'
 import JoinGroup from '../../components/JoinGroup/JoinGroup'
 
-class PageIntro extends React.Component {
-  render() {
+const PageIntro = (props) => {
     return (
       <div>
         <div class="jumbotron border border shadow p-3 mb-5">
@@ -22,7 +21,7 @@ class PageIntro extends React.Component {
           </p>
           <div class="collapse" id="createtask">
             <div class="card card-body">
-              <CreateTask />
+              <CreateTask newTask={props} />
             </div>
           </div>
           <div class="collapse" id="creategroup">
@@ -38,7 +37,6 @@ class PageIntro extends React.Component {
         </div>
       </div>
         );
-      };
     };
     
 export default PageIntro;
