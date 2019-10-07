@@ -1,5 +1,6 @@
 import React from 'react';
-import './HomePage.css'
+import './HomePage.css';
+import {Link} from 'react-router-dom';
 
 class HomePage extends React.Component {
   render() {
@@ -9,6 +10,7 @@ class HomePage extends React.Component {
         
           <h1 class="display-4"><img src="https://image.flaticon.com/icons/svg/1293/1293034.svg" width="60" height="60" alt=""></img>Taskmaster 6000</h1>
           <p class="lead">The future of stress free productivity</p>
+          <Link type="button" className="btn btn-dark" to="/signup">Signup<span className="sr-only">(current)</span></Link>
         </div>
       
       <div class="row justify-content-md-center margin">

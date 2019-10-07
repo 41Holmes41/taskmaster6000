@@ -24,7 +24,11 @@ const PageIntro = (props) => {
           </p>
           <div class="collapse" id="createtask">
             <div class="card card-body">
-              <CreateTask />
+              <CreateTask 
+                handleInputChange={props.handleInputChange} 
+                newTaskDescription={props.newTaskDescription} 
+                newTaskName={props.newTaskName}
+              />
             </div>
           </div>
           <div class="collapse" id="viewmembers">
@@ -34,12 +38,22 @@ const PageIntro = (props) => {
           </div>
           <div class="collapse" id="editgroup">
             <div class="card card-body">
-              <EditGroup />
+              <EditGroup 
+                handleEditGroupInputChange={props.handleEditGroupInputChange}
+                addEditGroup={props.addEditGroup} 
+                editGroupName={props.editGroupName}
+                editGroupPassword={props.editGroupPassword}
+                editGroupDescription={props.editGroupDescription}
+              />
             </div>
           </div>
           <div class="collapse" id="leavegroup">
             <div class="card card-body">
-              <LeaveGroup />
+              <LeaveGroup 
+                handleLeaveGroupInputChange={props.handleLeaveGroupInputChange}
+                leaveGroupPassword={props.leaveGroupPassword}
+                addLeaveGroup={props.addLeaveGroup}
+              />
             </div>
           </div>
         </div>

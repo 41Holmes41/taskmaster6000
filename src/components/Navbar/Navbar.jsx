@@ -1,36 +1,47 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./Navbar.css"
 
 
 class Navigation extends React.Component {
   render() {
+    let login;
+    let navbar;
+    if(this.props.user) {
+      login = <button type="button" onClick={this.props.handleLogout} className="btn btn-dark">Logout</button>
+      navbar = (
+        <ul className="navbar-nav ml-auto">
+        <li className="nav-item active">
+        <Link className="nav-link" to="/dashboard">Dashboard<span className="sr-only">(current)</span></Link>
+      </li>
+      <li className="nav-item active">
+        <Link className="nav-link" to="/inbox">Inbox<span className="sr-only">(current)</span></Link>
+      </li>
+      <li className="nav-item active">
+        <Link className="nav-link" to="/group/:id">Group Name<span className="sr-only">(current)</span></Link>
+      </li>
+      <li className="nav-item active">
+        <Link className="nav-link" to="/userinfo/:id">User Info<span className="sr-only">(current)</span></Link>
+      </li>
+      </ul>
+      )
+    } else {
+      login = <Link to="/login" type="button"  className="btn btn-dark">Login</Link>
+      navbar= null;
+    }
+    
     return (
-      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         
-        <Link class="navbar-brand" to="/"><img src="https://image.flaticon.com/icons/svg/1293/1293034.svg" width="30" height="30" alt=""></img>TaskMaster 6000</Link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <Link className="navbar-brand" to="/"><img src="https://image.flaticon.com/icons/svg/1293/1293034.svg" width="30" height="30" alt=""></img>TaskMaster 6000</Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/dashboard">Dashboard<span class="sr-only">(current)</span></Link>
-            </li>
-            <li class="nav-item active">
-              <Link class="nav-link" to="/inbox">Inbox<span class="sr-only">(current)</span></Link>
-            </li>
-            <li class="nav-item active">
-              <Link class="nav-link" to="/group/:id">Group Name<span class="sr-only">(current)</span></Link>
-            </li>
-            <li class="nav-item active">
-              <Link class="nav-link" to="/userinfo/:id">User Info<span class="sr-only">(current)</span></Link>
-            </li>
-          </ul>
-            <span class="navbar-text">
-           
-            <button type="button" class="btn btn-dark">Logout</button>
-            
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          
+              {navbar}
+          
+            <span className="navbar-text">
+              {login}            
             </span>
 
         </div>

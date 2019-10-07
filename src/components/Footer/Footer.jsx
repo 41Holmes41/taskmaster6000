@@ -5,9 +5,9 @@ const Footer = (props) => {
   return (
    
     <div className="card text-center footer">
-  <div class="card-header">
+  <div className="card-header">
   <img src="https://image.flaticon.com/icons/svg/1293/1293034.svg" width="40" height="40" alt=""></img>Thank you for using TaskMaster 6000
-  <div class=" text-muted">
+  <div className=" text-muted">
     Copyright 2019
   </div>
   </div>
