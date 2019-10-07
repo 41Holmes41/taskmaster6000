@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Taskmaster 6000
+##### The stress-free task management system
 
-## Available Scripts
 
-In the project directory, you can run:
+# Taskmaster 6000 is a task management app for companies, teachers and even families that intends to alleviate tension and stress between the boss and their employees, teachers and their students and parents and their children.  Inspired by a research study called "Getting Things Done: The Science behind Stress-Free Productivity" by Francis Heylighen and Clément Vidal of the Evolution, Complexity and Cognition research group, the Taskmaster 4000 format is backed quantitative and qualitative reasearch from the best minds in the psychological productivity field.
+![screen1](https://i.imgur.com/uzID8Jp.png)
 
-### `npm start`
+# Taskmaster 6000 operates off these basic principles:
+# 1. Bosses do not assign tasks to specific employees, rather the tasks are assigned to a pool
+# 2. Employees are free to claim any task from the pool
+# 3. Upon completion of the task, the employee recieve a points award
+# 4. Tasks that remain unclaimed after 24 hours of posting, will recieve a points increment
+# 5. The tasks continue to recieve points increments until they are claimed
+# 6. points can be redeemed for rewards or used as performance reviews
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### My favorite coding block
 
-### `npm test`
+#### Technologies used
+# 1. Javascript, node.js
+# 2. express
+# 3. React
+# 4. Heroku
+# 5. MongoDB
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Plans for future development
+[Trello Board](https://trello.com/b/UTOmquNt/project-4)
+[Wireframes and ERD](https://docs.google.com/presentation/d/11EuNJhwRJCv99f4DE6bK3_KdAYKsQksclJhKI6ynD-0/edit?usp=sharing)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
