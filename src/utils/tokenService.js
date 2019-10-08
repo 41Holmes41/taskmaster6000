@@ -22,7 +22,9 @@ function getToken() {
 
 function getUserFromToken() {
   const token = getToken();
-  return token ? JSON.parse(atob(token.split('.')[1])).user : null;
+  const user = token ? JSON.parse(atob(token.split('.')[1])).user : null;
+  return user;
+  /* return token ? JSON.parse(atob(token.split('.')[1])).user : null; */
 }
 
 function removeToken() {

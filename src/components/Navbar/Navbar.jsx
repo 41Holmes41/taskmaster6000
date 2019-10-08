@@ -17,9 +17,6 @@ class Navigation extends React.Component {
         <Link className="nav-link" to="/inbox">Inbox<span className="sr-only">(current)</span></Link>
       </li>
       <li className="nav-item active">
-        <Link className="nav-link" to="/group/:id">Group Name<span className="sr-only">(current)</span></Link>
-      </li>
-      <li className="nav-item active">
         <Link className="nav-link" to="/userinfo/:id">User Info<span className="sr-only">(current)</span></Link>
       </li>
       </ul>

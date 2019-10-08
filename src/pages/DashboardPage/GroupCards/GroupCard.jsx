@@ -1,10 +1,11 @@
 import React from 'react';
-import './Card.css'
+import { Link } from 'react-router-dom';
 
 const Card= (props) => {
-  if(props.items){
-    console.log(props.items)
-      return (
+
+    return (
+      props.groups.map(group => (
+        <Link to={'/group/' +group._id}>
         <div className="card m-1 rounded" >
         <div className="row no-gutters">
           <div className="col-md-4 col-2">
@@ -12,21 +13,17 @@ const Card= (props) => {
           </div>
           <div className="col-md-8">
             <div className="card-body">
-              <h5 className="card-title"></h5>
-              <p className="card-text">Group: </p>
-              <p className="card-text">Points: </p>
-              <p className="card-text"><small className="text-muted">3 hours till due date</small></p>
+              <h5 className="card-title">{group.name}</h5>
+              <p className="card-text">{group.description} </p>
+              <p className="card-text">Available Tasks: {group.availableTasks.length}  </p>
+              <p className="card-text"><small className="text-muted"></small></p>
             </div>
           </div>
         </div>
       </div>
+      </Link>
     )
-  } else {
-    return (
-
-    <div>You have no groups!</div>
-    )
-  }
+    ))
 };
 
 

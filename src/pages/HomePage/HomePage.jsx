@@ -9,8 +9,8 @@ class HomePage extends React.Component {
         <div class="jumbotron border shadow p-3 mb-5 rounded">
         
           <h1 class="display-4"><img src="https://image.flaticon.com/icons/svg/1293/1293034.svg" width="60" height="60" alt=""></img>Taskmaster 6000</h1>
-          <p class="lead">The future of stress free productivity</p>
-          <Link type="button" className="btn btn-dark" to="/signup">Signup<span className="sr-only">(current)</span></Link>
+          <p class="lead">The future of stress free productivity <Link type="button" className="btn btn-dark" to="/signup">Signup<span className="sr-only">(current)</span></Link></p>
+          
         </div>
       
       <div class="row justify-content-md-center margin">

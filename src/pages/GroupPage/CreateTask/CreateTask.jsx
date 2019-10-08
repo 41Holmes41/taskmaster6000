@@ -1,34 +1,36 @@
 import React from 'react';
-import taskService from '../../utils/taskService';
+import taskService from '../../../utils/taskService';
+import { equal } from 'assert';
 
 class CreateTask extends React.Component {
 
   constructor() {
     super();
     this.state= {
-      newTask: {
         name: "",
         description: "",
-        groups: [],  
-      },
+        groups: null,  
+    }
+  }
+
+  componentDidUpdate() {
+    if(this.props.groups!= this.state.groups){
+    this.setState({groups: this.props.groups})
     }
   }
 
   handleNewTaskInputChange = e => {
-    const newTask = {...this.state.newTask, [e.target.name]: e.target.value}
-    this.setState({newTask});  
+    this.setState({[e.target.name]: e.target.value});  
   }
 
   addTaskSubmit = async (e) => {
     e.preventDefault();
     try {
-      await taskService.create(this.state.newTask)
+      await taskService.create(this.state)
       this.setState({
-        newTask: {
           name: "",
           description: "",
-          groups: []
-        }
+          groups: ""
       })
     } catch (err) {
       console.log("create task error at createtask.jsx addtasksubmit", err)
@@ -51,7 +53,7 @@ class CreateTask extends React.Component {
             className="form-control" 
             id="taskname" 
             name="name" 
-            value={this.state.newTask.name} 
+            value={this.state.name} 
           />
         </div>
       </div>
@@ -65,7 +67,7 @@ class CreateTask extends React.Component {
             className="form-control" 
             id="description" 
             name="description"  
-            value={this.state.newTask.description} 
+            value={this.state.description} 
           />
         </div>
       </div>

@@ -7,6 +7,7 @@ require('./config/database');
 
 var tasksRouter = require('./routes/api/tasks');
 var usersRouter = require('./routes/api/users');
+var groupsRouter = require('./routes/api/groups');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 // Put API routes here, before the "catch all" route
 app.use('/api/tasks', tasksRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/groups', groupsRouter);
 
 // The following "catch all" route (note the *)is necessary
 // for a SPA's client-side routing to properly work

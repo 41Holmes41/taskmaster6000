@@ -18,7 +18,9 @@ class App extends React.Component  {
   constructor() {
     super();
     this.state= {
-      user: userService.getUser()
+      user: userService.getUser(),
+      groups:[],
+      currentTasks: []
     }
   }
   
@@ -31,6 +33,16 @@ class App extends React.Component  {
     this.setState({ user: null });
   }
 
+  async componentDidMount() {
+    if (this.state.user){
+    let userInfo = await userService.getInfo(this.state.user._id)
+    this.setState({
+      groups: userInfo.user.groups,
+      currentTasks: userInfo.user.currentTasks
+    })
+  }
+  }
+
  render() {
    return (
       <div className="App">
@@ -39,9 +51,17 @@ class App extends React.Component  {
 
           <Route exact path="/" render={()=><HomePage />}/>
 
-          <Route exact path='/dashboard'  render={() =><DashboardPage/>}/>
+          <Route exact path='/dashboard'  render={() =>
+            <DashboardPage
+              user={this.state.user}
+              groups={this.state.groups}
+              currentTasks={this.state.currentTasks}
+            />}/>
 
-          <Route exact path='/group/:id' render={(props) =><GroupPage {...props}/>}/>
+          <Route exact path='/group/:id' render={(props) =>
+            <GroupPage {...props}
+              user={this.state.user}
+          />}/>
 
           <Route exact path='/inbox' render={() =><InboxPage />}/>
        

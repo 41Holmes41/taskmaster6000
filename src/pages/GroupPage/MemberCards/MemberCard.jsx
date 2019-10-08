@@ -1,9 +1,9 @@
 import React from 'react';
-import './Card.css'
+
 
 const Card= (props) => {
-  if(props.items){
-    console.log(props.items)
+  if(props.tasks){
+    console.log(props.tasks)
       return (
         <div className="card m-1 rounded" >
         <div className="row no-gutters">
@@ -24,7 +24,7 @@ const Card= (props) => {
   } else {
     return (
 
-    <div>You have no groups!</div>
+    <div>You have no tasks!</div>
     )
   }
 };

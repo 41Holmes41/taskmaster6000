@@ -21,32 +21,17 @@ const PageIntro = (props) => {
           </p>
           <div className="collapse" id="createtask">
             <div className="card card-body">
-              <CreateTask 
-                newTaskDescription={props.newTaskDescription} 
-                handleNewTaskInputChange={props.handleNewTaskInputChange}
-                newTaskName={props.newTaskName}
-                addTask={props.addTask}
-                />
+              <CreateTask />
             </div>
           </div>
           <div className="collapse" id="creategroup">
             <div className="card card-body">
-              <CreateGroup 
-                handleCreateGroupInputChange={props.handleCreateGroupInputChange}
-                addGroup={props.addGroup} 
-                newGroupDescription={props.newGroupDescription} 
-                newGroupName={props.newGroupName}
-                newGroupPassword={props.newGroupPassword}
-              />
+              <CreateGroup />
             </div>
           </div>
           <div className="collapse" id="joingroup">
             <div className="card card-body">
               <JoinGroup 
-                handleJoinGroupInputChange={props.handleJoinGroupInputChange}
-                addJoinGroup={props.addJoinGroup} 
-                joinGroupName={props.joinGroupName}
-                joinGroupPassword={props.joinGroupPassword}
               />
             </div>
           </div>

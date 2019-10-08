@@ -4,7 +4,10 @@ var router = express.Router();
 var tasksCtlr = require('../../controllers/tasks');
 
 
-router.post('/newtask', tasksCtlr.newTask);
 
+/*---------- Protected Routes ----------*/
+router.use(require('../../config/auth'));
+router.post('/create', tasksCtlr.create);
+router.put('/edit', tasksCtlr.edit);
 
 module.exports = router;

@@ -4,7 +4,7 @@ const Group = require('../models/group');
 
 var taskSchema = new mongoose.Schema({
     name: String,
-    group: [{
+    groups: [{
         type: Schema.Types.ObjectId,
         ref: 'Group'
     }],

@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../../models/user');
-const usersCtrl = require('../../controllers/users');
+const groupsCtrl = require('../../controllers/groups');
 
 /*---------- Public Routes ----------*/
-router.post('/signup', usersCtrl.signup);
-router.post('/login', usersCtrl.login);
+
 
 
 /*---------- Protected Routes ----------*/
 router.use(require('../../config/auth'));
-router.get("/:id", usersCtrl.getInfo)
+router.post('/create', groupsCtrl.create);
+router.get('/:id', groupsCtrl.getInfo);
+
 
 
 

@@ -1,13 +1,12 @@
 import React from 'react';
-import Card from '../Card/Card'
-import "./Cards.css"
+import Card from './TaskCard'
 
 const Cards = (props) => {
     return (
       <div className="container bg-light margin border border shadow p-3 mb-5">
-      <h1>{props.title}</h1>
+      <h1>Your Current Tasks</h1>
       <div className="card-group">
-        <Card items={props.items}/>
+        <Card items={props.tasks}/>
       </div>
       </div>
     )

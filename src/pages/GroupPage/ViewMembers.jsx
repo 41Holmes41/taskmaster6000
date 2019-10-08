@@ -1,9 +1,10 @@
 import React from 'react';
-import Cards from "../../components/Cards/Cards"
+import MemberCards from "./MemberCards/MemberCards"
 
 const ViewMembers = (props) => {
+  console.log("member props", props)
   return (
-    <Cards />
+    <div>Heloo</div>
   )
 }
 export default ViewMembers;

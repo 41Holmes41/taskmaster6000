@@ -4,8 +4,21 @@ const SECRET = process.env.SECRET;
 
 module.exports = {
   signup,
-  login
+  login,
+  getInfo
 };
+
+async function getInfo(req, res) {
+  try {
+    const user = await User.findById(req.params.id);
+    await user.populate('groups').populate('currentTasks').execPopulate()
+      res.json({user})
+
+    
+  } catch(err){
+    res.status(400).json(err);
+  }
+}
 
 async function signup(req, res) {
   const user = new User(req.body);
@@ -20,7 +33,6 @@ async function signup(req, res) {
 }
 
 async function login(req, res) {
-  console.log(req.body)
   try {
     const user = await User.findOne({email: req.body.email});
     if (!user) return res.status(401).json({err: 'bad credentials'});

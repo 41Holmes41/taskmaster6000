@@ -9,7 +9,6 @@ function signup(user) {
     body: JSON.stringify(user)
   })
   .then(res => {
-    console.log("heyyyyyyyyyyyy", res)
     if (res.ok) return res.json();
     // Probably a duplicate email
     throw new Error('Email already taken!');
@@ -42,9 +41,22 @@ function login(creds) {
   .then(({token}) => tokenService.setToken(token));
 }
 
+function getInfo(id) {
+  return fetch(BASE_URL + id, {
+    method: 'GET',
+    headers: new Headers({'Content-Type': 'application/json'})
+  })
+  .then(res => {
+    // Valid login if we have a status of 2xx (res.ok)
+    if (res.ok) return res.json();
+    throw new Error('Bad Credentials!');
+  })
+}
+
 export default {
   signup, 
   getUser,
   logout,
-  login
+  login,
+  getInfo
 };
