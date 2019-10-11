@@ -23,8 +23,8 @@
 # 4. Heroku
 # 5. MongoDB
 
-#### Plans for future development
+#### Materials
 [Trello Board](https://trello.com/b/UTOmquNt/project-4)
 [Wireframes and ERD](https://docs.google.com/presentation/d/11EuNJhwRJCv99f4DE6bK3_KdAYKsQksclJhKI6ynD-0/edit?usp=sharing)
 [Any-a-gram](https://github.com/41Holmes41/anygram)
-
+[Presentation](https://docs.google.com/presentation/d/1ytb0DGSFOUKMnWJJAkPDP00TRlp8SJk3U33Y0P07zzE/edit?usp=sharing)
